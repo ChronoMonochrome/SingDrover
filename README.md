@@ -46,43 +46,6 @@ pip install -r requirements.txt
 
 The `build.sh` script is used to create the standalone executable using PyInstaller.
 
-#### `build.sh` Content:
-
-```
-#!/bin/bash
-
-# Build script for DroverProxyManager
-# Creates a single-file, console-less executable, excluding many standard Python modules
-# to reduce the final binary size.
-
-pyinstaller --name DroverProxyManager --onefile --noconsole main.py \
-    --exclude-module bz2 \
-    --exclude-module lzma \
-    --exclude-module multiprocessing \
-    --exclude-module pwd \
-    --exclude-module grp \
-    --exclude-module fcntl \
-    --exclude-module posix \
-    --exclude-module _hashlib \
-    --exclude-module _ssl \
-    --exclude-module _ctypes \
-    --exclude-module defusedxml \
-    --exclude-module uharbfuzz \
-    --exclude-module reportlab_settings \
-    --exclude-module dis \
-    --exclude-module opcode \
-    --exclude-module inspect \
-    --exclude-module unittest \
-    --exclude-module sqlite3 \
-    --exclude-module pdb \
-    --exclude-module cProfile \
-    --exclude-module asyncio \
-    --exclude-module trace \
-    --exclude-module timeit
-
-
-```
-
 #### Execution:
 
 1.  Make the script executable (Linux/macOS):
