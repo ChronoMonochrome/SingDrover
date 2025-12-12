@@ -1,5 +1,5 @@
 
-# DroverProxyManager
+# SingDrover
 
 A cross-platform system tray utility for managing the proxy settings and selector groups of a local `sing-box` instance via its Clash API.
 
