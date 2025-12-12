@@ -23,7 +23,7 @@ To run the compiled executable on Linux, you need the following system library p
 
 ### Build Requirements
 
-To build the executable from source, you must have Python 3.8+ and the packages listed in `requirements.txt` installed.
+To build the executable from source, you must have Python 3.8+, upx and the packages listed in `requirements.txt` installed.
 
 ## 🛠️ Build and Setup
 

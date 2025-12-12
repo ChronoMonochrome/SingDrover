@@ -1,1 +1,12 @@
-pyinstaller --name DroverProxyManager --onefile --noconsole main.py --exclude-module bz2 --exclude-module lzma --exclude-module multiprocessing --exclude-module pwd --exclude-module grp --exclude-module fcntl --exclude-module posix --exclude-module _hashlib --exclude-module _ssl --exclude-module _ctypes --exclude-module defusedxml --exclude-module uharfbuzz --exclude-module reportlab_settings --exclude-module dis --exclude-module opcode --exclude-module inspect --exclude-module unittest --exclude-module sqlite3 --exclude-module pdb --exclude-module doctest --exclude-module cProfile --exclude-module asyncio --exclude-module trace --exclude-module timeit
+#!/bin/bash
+
+nuitka --standalone --onefile \
+       --linux-onefile-icon=src/icon.png \
+       --output-filename=SingDrover \
+       --plugin-enable=upx \
+       --upx-binary=/usr/bin/upx \
+       src/main.py \
+       --nofollow-import-to=bcrypt \
+       --nofollow-import-to=cryptography \
+       --nofollow-import-to=numpy \
+       --nofollow-import-to=yaml

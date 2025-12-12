@@ -49,14 +49,14 @@ class MainApp:
         # Initialize icon and menu
         self.menu_items = self.create_menu_items()
         self.tray_icon = Icon(
-            'DroverApp',
+            'SingDrover',
             self.icon_image,
-            'Drover Proxy Manager',
+            'SingDrover',
             self.menu_items
         )
 
         # TrayIcon.OnClick behavior (toggle system proxy)
-        self.tray_icon.title = 'Drover Proxy Manager (Disabled)'
+        self.tray_icon.title = 'SingDrover (Disabled)'
         self.tray_icon.menu = Menu(*self.menu_items)
         self.tray_icon.left_click = self.tray_icon_click
 
@@ -79,7 +79,7 @@ class MainApp:
         """Updates the icon and title based on proxy status."""
         self.icon_image = self.create_icon_image(enable)
         self.tray_icon.icon = self.icon_image
-        self.tray_icon.title = f'Drover Proxy Manager ({"Enabled" if enable else "Disabled"})'
+        self.tray_icon.title = f'SingDrover ({"Enabled" if enable else "Disabled"})'
 
     def toggle_system_proxy(self, enable: bool):
         """Enables/Disables the system proxy."""

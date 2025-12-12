@@ -1,4 +1,4 @@
 pystray
 Pillow
 requests
-pyinstaller
+nuitka
